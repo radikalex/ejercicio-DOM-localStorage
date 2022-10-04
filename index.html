@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio DOM y Local Storage</title>
+    <style>
+        body {
+            padding-top: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 70%;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+        }
+
+        .usuarios {
+            width: 70%;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <form autocomplete="off">
+        <h1>Introduce tus datos:</h1>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+
+        <div class="botones">
+            <button onclick="eliminarDatos(event)">Eliminar contactos</button>
+            <button onclick="onSubmit(event)">Enviar</button>
+        </div>
+    </form>
+    <div class="usuarios"></div>
+    <script src="main.js"></script>
+</body>
+</html>
